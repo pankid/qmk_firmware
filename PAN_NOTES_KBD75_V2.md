@@ -55,3 +55,32 @@ make kbd75/rev2:pankid:dfu
 ```
 
 once flashing is finished, reboot your keyboard  and test it out. 
+
+## git notes on managing a fork
+
+to setup the fork I am following these instructions: [https://help.github.com/articles/fork-a-repo/](https://help.github.com/articles/fork-a-repo/)
+
+then following these instructions to sync the fork: [https://help.github.com/articles/syncing-a-fork/}(https://help.github.com/articles/syncing-a-fork/)
+
+my step by step commands are: 
+
+```
+cd /home/pan/git/qmk_firmware
+git remote -v #This will show you what is followed in the currect repository
+git remote add upstream https://github.com/qmk/qmk_firmware.git #this will add the qmk_firmware project as the upstream
+git remote -ve # we should now see the upstream repository set
+git fetch upstrea
+git checkout master
+git merge upstream/master
+```
+
+we should now be setup with a merged repo from upstream. May need to seup the `git config --global user.email` and `git config --global user.name`
+
+now to commit any changes
+
+```
+git add --all 
+git commit -m "some note"
+git push
+```
+
