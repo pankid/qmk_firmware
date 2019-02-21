@@ -69,7 +69,7 @@ cd /home/pan/git/qmk_firmware
 git remote -v #This will show you what is followed in the currect repository
 git remote add upstream https://github.com/qmk/qmk_firmware.git #this will add the qmk_firmware project as the upstream
 git remote -ve # we should now see the upstream repository set
-git fetch upstrea
+git fetch upstream
 git checkout master
 git merge upstream/master
 ```
