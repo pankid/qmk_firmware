@@ -4,8 +4,8 @@ These are my notes on programing my kbd75_v2 keybaord. I edited the keymap to ha
 
 ```
 i=7 o=8 p=9 [=0
-4=k 5=l 6=;
-1=, 2=. 3=/ 
+k=4 l=5 ;=6 ENTER=ENTER
+,=1 .=2 /=3 SHIFT=.
 ```
 
 To access these, hold down the key diretly to the right of the spacebar while hitting these keys. This is to access the second layer. 
@@ -46,12 +46,12 @@ Now edit the the copied keymap.c file. Each row of ------, is a row on the keybo
 once you are finished go back to the main qmk_firmware directory and compile. 
 
 ```
-make kbd75/rev2:pankid
+make kbdfans/kbd75/rev2:pankid
 ```
 once you have the firmware built without errors, you can now flash the keyboard. first run the make command, then restart the keyboard holding space and the b key to enter bootloader mode. Once the keyboard boots into bootloader mode the make command will show that it was found and fllash it. 
 
 ```
-make kbd75/rev2:pankid:dfu
+sudo make kbdfans/kbd75/rev2:pankid:dfu
 ```
 
 once flashing is finished, reboot your keyboard  and test it out. 
